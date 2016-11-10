@@ -1,0 +1,24 @@
+extends ../application.pug
+
+block content
+  .container
+    h1 Edit Form
+    hr
+    form(action="/books/" + book.id method="PUT")
+      div(class="form-group")
+        label(for="book-title") Title
+        input(name="title" type="text" class="form-control" id="book-title" value=book.title)
+      div(class="form-group")
+        label(for="book-cover-image") Cover Image URL
+        input(name="imageURL" type="text" class="form-control" id="book-cover-image" value=book.imageURL)
+      div(class="form-group")
+        label(for="book-author") Author
+        input(name="author" type="text" class="form-control" id="book-author" value=book.author)
+      div(class="form-group")
+        label(for="pages") pages
+        input(name="pages" type="integer" class="form-control" id="pages" value=book.pages)   
+      div(class="form-group")
+        label(for="book-description") Description
+        textarea(name="description" class="form-control" rows=5 id="book-description")= book.description
+      div(class="form-group text-xs-right")
+        button(type="submit" class="btn btn-lg btn-success") Submit

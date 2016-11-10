@@ -1,0 +1,18 @@
+extends ../application.pug
+
+block content
+	.container
+		h1 Listing Books
+		hr
+		each book in books
+			.card.card-block
+				.row
+					.col-md-4.hidden-md-down
+						img(src=book.imageURL alt=book.title + " Cover Image" class="img-fluid")
+					.col-xs-12.col-md-8
+						h2= book.title
+						h5= book.author
+						p= book.description
+						.text-xs-right
+							a(href="/books/" + book.id + "/edit" class="btn btn-warning") EDIT BOOK
+							//- button(type="submit" class="btn btn-danger ny-book-delete-button" data-book=book.id) DELETE

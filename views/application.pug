@@ -1,0 +1,14 @@
+html
+  head
+    title Bookstore Application
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous")
+  body
+    nav(class="navbar navbar-light bg-faded")
+      a(class="navbar-brand" href="/") Bookstore
+      a(href="/books/new" class="btn btn-success float-xs-right") Create new book
+
+
+    block content
+
+    script(src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous")
+    script(src="/js/application.js")
